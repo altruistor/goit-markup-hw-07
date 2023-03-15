@@ -317,7 +317,13 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
-
+@media screen and (max-width: 768px) {
+    .hero-title {
+        font-size: 36px;
+        margin-left: 54px;
+        margin-right: 54px;
+    }
+}
 
 
 /* Legend */
@@ -338,6 +344,9 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     gap: 24px;
     
 }
+
+
+
 
 .section-title {
     
@@ -392,6 +401,61 @@ color: var(--color-secondary);
     height: 64px;
 }
 
+@media screen and (max-width: 1200px) {
+    .legend-item-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+        justify-content: center;
+    }
+
+        .section-card-title {
+            font-weight: 700;
+                font-size: 36px;
+        }
+}
+
+@media screen and (max-width: 1200px) {
+    .target-list-card {
+    flex-basis: calc((100% - 24px) / 2);
+
+    }
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .target-list-icon-card {
+        display: none;
+        
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .legend-item-container {
+        display: block;
+
+
+        
+    }
+}
+
+@media screen and (min-width: 320px)  {
+    .legend-item-container .target-list-card:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 72px;
+    }
+    .section-card-title {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .target-list {
+        display: none;
+    }
+}
 
 
 /* Our Team */
@@ -417,9 +481,7 @@ color: var(--color-secondary);
     text-align: center;
 }
 
-/* .team-card-img {
-    margin-bottom: ;
-} */
+
 
 .our-team-text {
     font-family: 'Roboto', sans-serif;
@@ -445,6 +507,34 @@ color: var(--color-secondary);
 .team-card {
     text-align: center;
 
+}
+
+.team-card-title {
+    color: var(--color-secondary);
+        font-weight: 500;
+        line-height: 1.2;
+        font-size: 20px;
+        letter-spacing: 0.02em;
+        margin-bottom: 8px;
+}
+
+@media screen and (max-width: 1200px) {
+    .team-cards-list {
+    display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 64px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .team-cards-list {
+        
+        row-gap: 72px;
+        
+    }
 }
 
 /* Social Icons */
@@ -606,6 +696,14 @@ width: 24px;
 
 }
 
+@media screen and (max-width:1200px) {
+    .customers-list{
+    flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
 /* Portfolio */
 
 .portfolio-container {
@@ -679,11 +777,6 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
-/* .portfolio-card-bg {
-    
-    
-   
-} */
 
 .portfolio-card-link {
     background-color: var(--color-hero-button);
@@ -702,6 +795,54 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     
 }
+
+@media screen and (max-width: 1200px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+}
+
+@media screen and (max-width: 1200px) {
+    .portfolio-filter {
+        flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio-filter {
+        
+        justify-content: left;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio-card-container {
+
+        justify-content: center;
+    }
+
+}
+@media screen and (max-width: 768px) {
+    .portfolio-container {
+
+        padding-top: 48px;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    .portfolio-container {
+
+        padding-top: 64px;
+    }
+
+}
+    
 
 
 

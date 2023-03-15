@@ -19,11 +19,12 @@
     <div class="container">
       <div class="header-container">
         <a class="logo-text" href="./index.html"><span class="logo-color-dark">Web</span><span>Studio</span></a>
+
         <nav class="header-nav">
           <ul class="header-nav-list">
             <li><a class="header-nav-link" href="./index.html">Studio</a></li>
             <li>
-              <a class="header-nav-link current" href="./portfolio.html">Portfolio</a>
+              <a class="header-nav-link  current" href="./portfolio.html">Portfolio</a>
             </li>
             <li><a class="header-nav-link" href="">Contacts</a></li>
           </ul>
@@ -38,8 +39,16 @@
             </li>
           </ul>
         </address>
+        <button class="js-open-modal" data-modal="1"><svg width="32px" height="22px" style="stroke: #2E2F42;">
+            <use href="./images/icons.svg#icon-hamburger"></use>
+          </svg></button>
+
+
+
+
       </div>
     </div>
+
   </header>
 
 
@@ -69,7 +78,7 @@
               </div>
 
               <div class="portfolio-card-text">
-                <h2 class="section-card-title">Banking App Interface Concept</h2>
+                <h2 class="team-card-title">Banking App Interface Concept</h2>
                 <p class="our-team-text">App</p>
               </div>
             </a></li>
@@ -85,7 +94,7 @@
               </div>
 
               <div class="portfolio-card-text">
-                <h2 class="section-card-title">Cashless Payment</h2>
+                <h2 class="team-card-title">Cashless Payment</h2>
                 <p class="our-team-text">Marketing</p>
               </div>
             </a>
@@ -100,7 +109,7 @@
                 </div>
               </div>
               <div class="portfolio-card-text">
-                <h2 class="section-card-title">Meditaion App</h2>
+                <h2 class="team-card-title">Meditaion App</h2>
                 <p class="our-team-text">App</p>
               </div>
             </a>
@@ -116,7 +125,7 @@
                 </div>
             </div>
             <div class="portfolio-card-text">
-              <h2 class="section-card-title">Taxi Service</h2>
+              <h2 class="team-card-title">Taxi Service</h2>
               <p class="our-team-text">Marketing</p>
             </div></a>
           </li>
@@ -130,7 +139,7 @@
                 </div>
               </div>
               <div class="portfolio-card-text">
-                <h2 class="section-card-title">Screen Illustrations</h2>
+                <h2 class="team-card-title">Screen Illustrations</h2>
                 <p class="our-team-text">Design</p>
               </div>
             </a>
@@ -145,7 +154,7 @@
                 </div>
               </div>
               <div class="portfolio-card-text">
-                <h2 class="section-card-title">Online Courses</h2>
+                <h2 class="team-card-title">Online Courses</h2>
                 <p class="our-team-text">Marketing</p>
               </div>
             </a>
@@ -160,7 +169,7 @@
                 </div>
               </div>
               <div class="portfolio-card-text">
-                <h2 class="section-card-title">Instagram Stories Concept</h2>
+                <h2 class="team-card-title">Instagram Stories Concept</h2>
                 <p class="our-team-text">Marketing</p>
               </div>
             </a>
@@ -175,7 +184,7 @@
                 </div>
               </div>
               <div class="portfolio-card-text">
-                <h2 class="section-card-title">Organic Food</h2>
+                <h2 class="team-card-title">Organic Food</h2>
                 <p class="our-team-text">Web Site</p>
               </div>
             </a>
@@ -190,7 +199,7 @@
                 </div>
               </div>
               <div class="portfolio-card-text">
-                <h2 class="section-card-title">Fresh Coffee</h2>
+                <h2 class="team-card-title">Fresh Coffee</h2>
                 <p class="our-team-text">Web Site</p>
               </div>
             </a>
@@ -205,6 +214,7 @@
     <div class="container">
       <div class="footer-flex">
         <div class="footer-logo-description">
+
           <a class="logo-text" href="./index.html">
             <span style="color: var(--color-hero-button-bg)">Web</span><span
               style="color: var(--color-card-bg)">Studio</span></a>
@@ -253,12 +263,67 @@
             </div>
           </form>
 
+
+
         </div>
       </div>
     </div>
 
-
   </footer>
+
+  <!-- Header Mobile Menu -->
+
+  <div class="modal" data-modal="1">
+
+    <button class="js-modal-close" type="button" data-modal-close><svg class="close-button-icon">
+        <use href="./images/icons.svg#icon-close-button"></use>
+      </svg></button>
+    <nav>
+      <div class="nav-mobile-flex">
+        <ul class="nav-mobile">
+          <li><a class="header-nav-link-mobile" href="./index.html">Studio</a></li>
+          <li>
+            <a class="header-nav-link-mobile  current" href="./portfolio.html">Portfolio</a>
+          </li>
+          <li><a class="header-nav-link-mobile" href="">Contacts</a></li>
+        </ul>
+        <ul>
+          <li class="header-contacts-mobile-list"><a class="header-tel-mobile" href="tel:+110001111111">+11 (000)
+              111-11-11</a></li>
+          <li><a class="header-mail-text-mobile" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+          <li class="header-contacts-mobile-list">
+            <ul class="social-icons-list-mobile">
+              <li class="social-icons-item">
+                <a class="social-icons-link" href="#"><svg class="social-icons-mobile">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg></a>
+              </li>
+              <li class="social-icons-item">
+                <a class="social-icons-link" href="#"><svg class="social-icons-mobile">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg></a>
+              </li>
+              <li class="social-icons-item">
+                <a class="social-icons-link" href="#"><svg class="social-icons-mobile">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg></a>
+              </li>
+              <li class="social-icons-item">
+                <a class="social-icons-link" href="#"><svg class="social-icons-mobile">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <script src=" ./js/modal.js">
+  </script>
+  <script src=" ./js/modal-mobile.js">
+  </script>
 
 </body>
 
