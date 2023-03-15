@@ -66,6 +66,25 @@ button {
     cursor: pointer;
   }
 
+  .container {
+      max-width: 428px;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  @media screen and (min-width: 768px) {
+      .container {
+          max-width: 768px;
+      }
+  }
+
+  @media screen and (min-width: 1158px) {
+      .container {
+          max-width: 1158px;
+      }
+  }
 
 /* Logo */
 
@@ -186,6 +205,58 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     gap: 40px;
 
 }
+
+/* Header media */
+
+@media screen and (max-width: 767px) {
+
+    .header-address-list {
+        display: none;
+    }
+
+    .header-nav-link {
+        display: none;
+    }
+
+    .logo-text {
+        padding-top: 24px;
+            padding-bottom: 24px;
+    }
+    
+    .header-container {
+        justify-content: space-between;
+    }
+
+         .button-burger {
+            
+            background: transparent;
+            border: 0px;
+             
+         }
+         .burger-icon-svg {
+            display: inline-block;
+                width: 1em;
+                height: 1em;
+                stroke-width: 0;
+                
+                fill: currentColor;
+            stroke: #2E2F42;
+         }
+
+         .js-open-modal {
+            padding: 0;
+            border: none;
+            background-color: transparent;
+         }
+     
+}
+
+@media screen and (min-width: 768px) {
+    .js-open-modal {
+        display: none;
+    }
+}
+
 /* Hero */
 
 
@@ -654,6 +725,8 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 /* Footer */
 
+
+
 footer {
     background-color: var(--color-secondary);
     color: var(--color-hero-button);
@@ -752,6 +825,100 @@ footer {
 .subscribe-icon {
     fill: var(--color-hero-button);
 }
+
+/* Header media */
+
+@media screen and (max-width: 1200px) {
+
+    .header-address-list-items {
+        display: block;
+    }
+    .header-contacts {
+        padding: 0;
+    }
+
+    
+}
+
+/*Footer media */
+
+@media screen and (max-width: 767px) 
+{
+    .footer-flex {
+            display: block;
+        }
+    
+    .footer-container {
+            display: block;
+            padding: 96px 16px;
+    
+        }
+
+    .footer-logo-description {
+        
+        margin-bottom: 72px;
+    }
+    
+    .footer-social {
+        margin-bottom: 72px;
+    } 
+
+    .footer-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .subscribe-items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .subscribe-submit-button {
+        width: 165px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-subscribe-email-form-input {
+        width: auto;
+    }
+
+    .footer-social-header {
+        text-align: center;
+    }
+
+    .logo-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+    @media screen and (min-width: 768px) {
+        .footer-container {
+            display: flex;
+        }
+
+        .footer-flex {
+            display: flex;
+            
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+
+           .footer-flex {
+            flex-wrap: wrap;
+            /* padding: 96px 16px; */
+            flex-direction: row;
+            row-gap: 72px;
+            column-gap: 24px;
+           }
+    }
+    
+
+
 
 
 
@@ -936,6 +1103,10 @@ footer {
     
 }
 
+.button-mobile-menu {
+    fill: #000;
+}
+
 .modal-form-input:focus {
 border-color: var(--color-hero-button-bg);
 }
@@ -1053,3 +1224,146 @@ border-color: var(--color-hero-button-bg);
 
 
 
+
+
+/* Mobile Modal */
+
+.header-nav-link-mobile {
+    font-weight: 700;
+        font-size: 36px;
+        letter-spacing: 0.02em;
+        line-height: 1.1;
+        color: var(--color-secondary);
+        text-decoration-line: none;
+        font-style: normal;
+
+}
+
+.header-tel-mobile {
+    font-style: normal;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 1.1;
+        
+        text-transform: capitalize;
+        color: var(--color-hero-button-bg)
+}
+
+.header-contacts-mobile-list {
+margin-bottom: 40px;
+}
+.header-nav-link-mobile.current {
+    color: var(--color-hero-hover);
+}
+
+.nav-mobile-flex {
+height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 284px;
+    padding-top: 80px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+
+}
+
+.header-mail-text-mobile {
+    font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        
+    
+        letter-spacing: 0.02em;
+    
+        
+    
+        color: var(--color-primary);
+}
+
+.social-icons-list-mobile {
+display: flex;
+    margin-top: 48px;
+    gap: 24px;
+    
+} 
+
+.social-icons-mobile {
+    width: 24px;
+    height: 24px;
+    fill: var(--color-card-bg);
+}
+
+.nav-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.overlay {
+
+    /* Скрываем подложку  */
+    opacity: 0;
+    visibility: hidden;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 20;
+    transition: .3s all;
+}
+
+
+/* Стили для модальных окон */
+
+.modal {
+
+    /* Скрываем окна  */
+    opacity: 0;
+    visibility: hidden;
+
+
+        position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255);
+            
+            padding: 20px 0;
+            transition: opacity 500ms, visibility 500ms;
+}
+
+
+/* Стили для активных классов подложки и окна */
+
+.modal.active,
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Стили для кнопки закрытия */
+
+.js-modal-close {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--color-filter-bg);
+            top: 24px;
+            right: 24px;
+            height: 24px;
+            width: 24px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            transition-property: background-color, fill;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+    
