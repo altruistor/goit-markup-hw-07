@@ -246,7 +246,7 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
          }
 
          .js-open-modal {
-            padding: 0;
+            padding: 24px 0;
             border: none;
             background-color: transparent;
          }
@@ -290,6 +290,28 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 
         
        
+}
+
+@media screen and (max-width: 1200px) {
+    .hero {
+        padding: 137px 112px;
+
+    }
+}
+
+
+/* @media screen and (min-width: 768px) {
+    .hero {
+        padding: 137px 112px;
+
+    }
+} */
+
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 112px 0;
+
+    }
 }
 
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -415,13 +437,18 @@ color: var(--color-secondary);
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 24px;
+        row-gap: 72px;
+        column-gap: 24px;
         justify-content: center;
     }
 
         .section-card-title {
             font-weight: 700;
                 font-size: 36px;
+        }
+
+        .skills-text {
+            font-weight: 500;
         }
 }
 
@@ -467,6 +494,25 @@ color: var(--color-secondary);
 }
 
 
+/* Container for Our Team and Customers For Tablet */
+
+@media screen and (min-width: 768px) {
+    .container-tablet {
+        max-width: 582px;
+        width: auto;
+        
+            margin-left: auto;
+            margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container-tablet {
+        max-width: 1200px;
+    }
+}
+
+
 /* Our Team */
 
 
@@ -506,6 +552,7 @@ color: var(--color-secondary);
 .skills-text {
     letter-spacing: 0.02em;
     line-height: 1.5;
+    
     
 }
 
@@ -856,9 +903,16 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 .portfolio-card-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 48px 24px;
+    gap: 48px 18px;
 
 }
+
+/* @media screen and (min-width: 768px) {
+
+ .portfolio-card-list {
+    flex-basis: calc((100% - 24px) / 2);
+}
+} */
 
 .portfolio-card-text {
     padding: 32px 16px;
@@ -986,6 +1040,7 @@ footer {
     .header-contacts {
         padding: 0;
         font-size: 12px;
+        margin-bottom: 4px;
     }
 
     
@@ -993,7 +1048,7 @@ footer {
 
 /*Footer media */
 
-@media screen and (max-width: 767px) 
+@media screen and (max-width: 768px) 
 {
     .footer-flex {
             display: block;
@@ -1042,6 +1097,7 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 0 0;
     }
 
 }
@@ -1117,10 +1173,10 @@ footer {
 .modal-window {
     position: relative;
     width: 100%;
-    height: 100%;
+    
 
     max-width: 408px;
-    max-height: 584px;
+    max-height: fit-content;
     background-color: var(--color-hero-button);
    
         border-radius: 4px;
@@ -1405,11 +1461,20 @@ border-color: var(--color-hero-button-bg);
         z-index: 100;
         width: 100%;
         height: 100%;
+        
     }
 
     .js-menu-content {
-        
+        max-width: 480px;
+        margin: 0 auto;
+        position: relative;
+            padding-top: 80px;
+                padding-left: 40px;
+                padding-bottom: 40px;
+                height: 796px;
     }
+
+    
 
 .header-nav-link-mobile {
     font-weight: 700;
@@ -1443,10 +1508,8 @@ margin-bottom: 40px;
 height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 284px;
-    padding-top: 80px;
-    padding-left: 40px;
-    padding-bottom: 40px;
+    justify-content: space-between;
+
 
 }
 
@@ -1489,7 +1552,7 @@ display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--color-filter-bg);
-    top: 24px;
+    top: 40px;
     right: 24px;
     height: 24px;
     width: 24px;
