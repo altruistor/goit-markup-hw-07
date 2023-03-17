@@ -29,6 +29,8 @@
             <li><a class="header-nav-link" href="">Contacts</a></li>
           </ul>
         </nav>
+
+
         <address class="header-address-list">
           <ul class="header-address-list-items">
             <li>
@@ -39,13 +41,10 @@
             </li>
           </ul>
         </address>
-        <button class="js-open-modal" data-modal="1"><svg width="32px" height="22px" style="stroke: #2E2F42;">
+        <button type="button" class="js-open-modal" data-menu-open><svg width="32px" height="22px"
+            style="stroke: #2E2F42;">
             <use href="./images/icons.svg#icon-hamburger"></use>
           </svg></button>
-
-
-
-
       </div>
     </div>
 
@@ -125,12 +124,16 @@
         <h2 class="section-title">What are we doing</h2>
 
         <ul class="target-list-img">
-          <li><img src="./images/pc.jpg" alt="Computer" width="360" /></li>
-          <li>
-            <img src="./images/phones.jpg" alt="Four phones" width="360" />
+          <li><img srcset="./images/pc.jpg 1x, ./images/pc@2x.jpg 2x" src="./images/pc.jpg" alt="Computer"
+              width="360" />
           </li>
           <li>
-            <img src="./images/handwithphone.jpg" alt="Holding the phone" width="360" />
+            <img srcset="./images/phones.jpg 1x, ./images/phones@2x.jpg 2x" src="./images/phones.jpg" alt="Four phones"
+              width="360" />
+          </li>
+          <li>
+            <img srcset="./images/handwithphone.jpg 1x, ./images/handwithphone@2x.jpg 2x"
+              src="./images/handwithphone.jpg" alt="Holding the phone" width="360" />
           </li>
         </ul>
       </div>
@@ -146,7 +149,8 @@
 
           <li class="section-card-box">
             <div class="team-card-img">
-              <img src="./images/beardman.jpg" width="264" alt="Mark" />
+              <img srcset="./images/beardman.jpg 1x, ./images/beardman@2x.jpg 2x" src="./images/beardman.jpg"
+                width="264" alt="Mark" />
             </div>
             <div class="team-card-text">
               <h3 class="team-card-title">Mark Guerrero</h3>
@@ -179,7 +183,8 @@
 
 
           <li class="section-card-box">
-            <img src="./images/tomford.jpg" width="264" alt="Tom Ford" />
+            <img srcset="./images/tomford.jpg 1x, ./images/tomford@2x.jpg 2x" src="./images/tomford.jpg" width="264"
+              alt="Tom Ford" />
             <div class="team-card-text">
               <h3 class="team-card-title">Tom Ford</h3>
               <p class="our-team-text">Frontend Developer</p>
@@ -209,7 +214,8 @@
           </li>
 
           <li class="section-card-box">
-            <img src="./images/camila.jpg" width="264" alt="Camila Garcia" />
+            <img srcset="./images/camila.jpg 1x, ./images/camila@2x.jpg 2x" src="./images/camila.jpg" width="264"
+              alt="Camila Garcia" />
             <div class="team-card-text">
               <h3 class="team-card-title">Camila Garcia</h3>
               <p class="our-team-text">Marketing</p>
@@ -239,7 +245,8 @@
           </li>
 
           <li class="section-card-box">
-            <img src="./images/daniel.jpg" width="264" alt="Daniel Wilson" />
+            <img srcset="./images/daniel.jpg 1x, ./images/daniel@2x.jpg 2x" src="./images/daniel.jpg" width="264"
+              alt="Daniel Wilson" />
             <div class="team-card-text">
               <h3 class="team-card-title">Daniel Wilson</h3>
               <p class="our-team-text">UI Designer</p>
@@ -323,6 +330,8 @@
       </div>
     </section>
   </main>
+
+  <!-- Footer -->
 
   <footer class="footer-container">
     <div class="container">
@@ -439,51 +448,55 @@
 
   <!-- Header Mobile Menu -->
 
-  <div class="modal" data-modal="1">
+  <div class="backdrop-mobile is-hidden" data-menu>
+    <div class="js-menu-container">
+      <div class="js-menu-content">
 
-    <button class="js-modal-close" type="button" data-modal-close><svg class="close-button-icon">
-        <use href="./images/icons.svg#icon-close-button"></use>
-      </svg></button>
-    <nav>
-      <div class="nav-mobile-flex">
-        <ul class="nav-mobile">
-          <li><a class="header-nav-link-mobile current" href="./index.html">Studio</a></li>
-          <li>
-            <a class="header-nav-link-mobile" href="./portfolio.html">Portfolio</a>
-          </li>
-          <li><a class="header-nav-link-mobile" href="">Contacts</a></li>
-        </ul>
-        <ul>
-          <li class="header-contacts-mobile-list"><a class="header-tel-mobile" href="tel:+110001111111">+11 (000)
-              111-11-11</a></li>
-          <li><a class="header-mail-text-mobile" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-          <li class="header-contacts-mobile-list">
-            <ul class="social-icons-list-mobile">
-              <li class="social-icons-item">
-                <a class="social-icons-link" href="#"><svg class="social-icons-mobile">
-                    <use href="./images/icons.svg#icon-instagram"></use>
-                  </svg></a>
+        <nav>
+          <div class="nav-mobile-flex">
+            <button class="js-modal-close" type="button" data-menu-close><svg class="close-button-icon">
+                <use href="./images/icons.svg#icon-close-button"></use>
+              </svg></button>
+            <ul class="nav-mobile">
+              <li><a class="header-nav-link-mobile current" href="./index.html">Studio</a></li>
+              <li>
+                <a class="header-nav-link-mobile" href="./portfolio.html">Portfolio</a>
               </li>
-              <li class="social-icons-item">
-                <a class="social-icons-link" href="#"><svg class="social-icons-mobile">
-                    <use href="./images/icons.svg#icon-twitter"></use>
-                  </svg></a>
-              </li>
-              <li class="social-icons-item">
-                <a class="social-icons-link" href="#"><svg class="social-icons-mobile">
-                    <use href="./images/icons.svg#icon-facebook"></use>
-                  </svg></a>
-              </li>
-              <li class="social-icons-item">
-                <a class="social-icons-link" href="#"><svg class="social-icons-mobile">
-                    <use href="./images/icons.svg#icon-linkedin"></use>
-                  </svg></a>
+              <li><a class="header-nav-link-mobile" href="">Contacts</a></li>
+            </ul>
+            <ul>
+              <li class="header-contacts-mobile-list"><a class="header-tel-mobile" href="tel:+110001111111">+11 (000)
+                  111-11-11</a></li>
+              <li><a class="header-mail-text-mobile" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+              <li class="header-contacts-mobile-list">
+                <ul class="social-icons-list-mobile">
+                  <li class="social-icons-item">
+                    <a class="social-icons-link" href="#"><svg class="social-icons-mobile">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg></a>
+                  </li>
+                  <li class="social-icons-item">
+                    <a class="social-icons-link" href="#"><svg class="social-icons-mobile">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                      </svg></a>
+                  </li>
+                  <li class="social-icons-item">
+                    <a class="social-icons-link" href="#"><svg class="social-icons-mobile">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                      </svg></a>
+                  </li>
+                  <li class="social-icons-item">
+                    <a class="social-icons-link" href="#"><svg class="social-icons-mobile">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                      </svg></a>
+                  </li>
+                </ul>
               </li>
             </ul>
-          </li>
-        </ul>
+          </div>
+        </nav>
       </div>
-    </nav>
+    </div>
   </div>
 
 

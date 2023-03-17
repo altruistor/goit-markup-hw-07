@@ -74,13 +74,15 @@ button {
       margin-right: auto;
   }
 
+ 
+
   @media screen and (min-width: 768px) {
       .container {
           max-width: 768px;
       }
   }
 
-  @media screen and (min-width: 1158px) {
+  @media screen and (min-width: 1200px) {
       .container {
           max-width: 1158px;
       }
@@ -290,6 +292,13 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
        
 }
 
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office@2x.jpg);
+       
+    }
+}
+
 .hero-button {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -320,8 +329,8 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 @media screen and (max-width: 768px) {
     .hero-title {
         font-size: 36px;
-        margin-left: 54px;
-        margin-right: 54px;
+        padding-left: 54px;
+        padding-right: 54px;
     }
 }
 
@@ -441,7 +450,7 @@ color: var(--color-secondary);
     }
 }
 
-@media screen and (min-width: 320px)  {
+@media screen and (max-width: 768px)  {
     .legend-item-container .target-list-card:not(:last-child) {
     margin-right: 0;
     margin-bottom: 72px;
@@ -561,7 +570,6 @@ color: var(--color-secondary);
 
 .footer-social-icons-list {
     display: flex;
-    margin-top: 8px;
     gap: 16px;
     align-items: center;
     justify-content: center;
@@ -796,12 +804,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
-@media screen and (max-width: 1200px) {
-    .container {
-        padding: 0 10px;
-    }
-    
-}
+
 
 @media screen and (max-width: 1200px) {
     .portfolio-filter {
@@ -888,8 +891,8 @@ footer {
 }
 
 .footer-flex {
-    display:flex;
-    gap: 120px;
+    display: flex;
+    gap: 100px;
 }
 .footer-social-header {
     color: var(--color-hero-button);
@@ -958,6 +961,10 @@ footer {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     display: inline-flex;
     cursor: pointer;
+    letter-spacing: 0.04em;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
 }
 
 .subscribe-submit-button:hover,
@@ -978,6 +985,7 @@ footer {
     }
     .header-contacts {
         padding: 0;
+        font-size: 12px;
     }
 
     
@@ -1371,6 +1379,38 @@ border-color: var(--color-hero-button-bg);
 
 /* Mobile Modal */
 
+.backdrop-mobile {
+    position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.backdrop-mobile.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.js-menu-container {
+    position: fixed;
+        top: 0;
+        left: 0;
+        background-color: white;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+    }
+
+    .js-menu-content {
+        
+    }
+
 .header-nav-link-mobile {
     font-weight: 700;
         font-size: 36px;
@@ -1443,70 +1483,32 @@ display: flex;
     gap: 40px;
 }
 
-.overlay {
-
-    /* Скрываем подложку  */
-    opacity: 0;
-    visibility: hidden;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .5);
-    z-index: 20;
-    transition: .3s all;
-}
-
-
-/* Стили для модальных окон */
-
-.modal {
-
-    /* Скрываем окна  */
-    opacity: 0;
-    visibility: hidden;
-
-
-        position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255);
-            
-            padding: 20px 0;
-            transition: opacity 500ms, visibility 500ms;
-}
-
-
-/* Стили для активных классов подложки и окна */
-
-.modal.active,
-.overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-
-/* Стили для кнопки закрытия */
-
 .js-modal-close {
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: var(--color-filter-bg);
-            top: 24px;
-            right: 24px;
-            height: 24px;
-            width: 24px;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            border-radius: 50%;
-            transition-property: background-color, fill;
-            transition-duration: 250ms;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        }
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-filter-bg);
+    top: 24px;
+    right: 24px;
+    height: 24px;
+    width: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transition-property: background-color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-    
+@media screen and (min-width: 768px) {
+
+    .js-menu-container {
+        display: none;
+
+    }
+
+    .backdrop-mobile {
+        background-color: transparent;
+    }
+}
+
