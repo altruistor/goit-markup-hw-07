@@ -220,7 +220,10 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
         display: none;
     }
 
-    
+    .logo-text {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
     
     .header-container {
         justify-content: space-between;
