@@ -370,6 +370,13 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
+@media screen and (max-width: 1200px) {
+    .legend-item-list {
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+}
+
 .legend-item-container {
     display: flex;
     gap: 24px;
@@ -506,9 +513,17 @@ color: var(--color-secondary);
     }
 }
 
+
 @media screen and (min-width: 1200px) {
     .container-tablet {
         max-width: 1200px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .our-team-container {
+        padding-top: 96px;
+            padding-bottom: 96px;
     }
 }
 
@@ -523,7 +538,11 @@ color: var(--color-secondary);
     
 }
 
-
+@media screen and (max-width: 1200px) {
+    .our-team-container {
+        padding: 96px;
+    }
+}
 .team-cards-list {
     display: flex;
     gap: 24px;
@@ -694,6 +713,13 @@ width: 24px;
 .customers {
     padding: 130px 0px;
 }
+
+@media screen and (max-width: 1200px) {
+    .customers {
+        padding: 96px;
+    }
+}
+
 .customers-list {
     display: flex;
     gap: 24px;
@@ -756,6 +782,7 @@ width: 24px;
     flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        row-gap: 72px;
     }
 }
 
@@ -806,6 +833,8 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
 }
+
+
 
 .portfolio-card-link:hover .portfolio-card-overlay-text,
 .portfolio-card-link:focus .portfolio-card-overlay-text {
@@ -859,6 +888,10 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
             flex-wrap: wrap;
             justify-content: center;
     }
+
+    .portfolio-image {
+        width: 356px;
+    }
     
 }
 
@@ -890,7 +923,9 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
         padding-top: 64px;
     }
-
+.portfolio-card-bg {
+    flex-basis: calc((100% - 24px) / 2);
+}
 }
     
 
@@ -903,15 +938,13 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 .portfolio-card-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 48px 18px;
+    gap: 48px 24px;
 
 }
 
 /* @media screen and (min-width: 768px) {
 
- .portfolio-card-list {
-    flex-basis: calc((100% - 24px) / 2);
-}
+ 
 } */
 
 .portfolio-card-text {
@@ -1035,12 +1068,14 @@ footer {
 @media screen and (max-width: 1200px) {
 
     .header-address-list-items {
-        display: block;
+        
+        flex-direction: column;
+        gap: 4px;
     }
     .header-contacts {
         padding: 0;
         font-size: 12px;
-        margin-bottom: 4px;
+        
     }
 
     
