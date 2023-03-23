@@ -520,12 +520,7 @@ color: var(--color-secondary);
     }
 }
 
-@media screen and (max-width: 1200px) {
-    .our-team-container {
-        padding-top: 96px;
-            padding-bottom: 96px;
-    }
-}
+
 
 
 /* Our Team */
@@ -538,9 +533,11 @@ color: var(--color-secondary);
     
 }
 
+
 @media screen and (max-width: 1200px) {
     .our-team-container {
-        padding: 96px;
+        padding-top: 96px;
+        padding-bottom: 96px;
     }
 }
 .team-cards-list {
@@ -716,7 +713,7 @@ width: 24px;
 
 @media screen and (max-width: 1200px) {
     .customers {
-        padding: 96px;
+        padding: 96px 0;
     }
 }
 
@@ -1581,6 +1578,8 @@ display: flex;
     gap: 40px;
 }
 
+
+
 .js-modal-close {
     position: absolute;
     display: flex;
@@ -1597,6 +1596,8 @@ display: flex;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
 
 @media screen and (min-width: 768px) {
 
